@@ -13,6 +13,11 @@ app.all('*',
 		next();
 	});
 
+app.get('/',
+	(req,res) =>{
+	res.sendfile('./index.html');
+});
+
 app.get('/getAllSerieses',
 	(req,res) => {
 	res.json(mod.getAllSerieses());
